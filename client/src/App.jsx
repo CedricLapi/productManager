@@ -1,4 +1,7 @@
-import PersonForm from "./components/PersonForm"
+import React from 'react';
+import axios from 'axios';
+import Main from '../views/Main';
+
 
 
 
@@ -8,8 +11,15 @@ function App() {
 
   return (
     <div className="App">
-      <PersonForm />
-    
+
+      <BrowserRouter>
+      </BrowserRouter>
+
+
+
+
+  
+      
     </div>
   )
 }
