@@ -1,6 +1,7 @@
+import PersonForm from "./components/PersonForm"
 
 
-import PersonForm from "./components/PersonForm";
+
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <PersonForm />
+    
     </div>
   )
 }
