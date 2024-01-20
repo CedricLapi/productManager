@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './components/views/Main';
+import Detail from './components/Detail';
 
 
 
@@ -20,7 +21,8 @@ function App() {
       <BrowserRouter>
 
       <Routes>
-        <Route element={<Main />} path='/' default />
+        <Route element={<Main />} path='/people/' />
+        <Route element={<Detail />}  path='/people/:id' />
 
       </Routes>
       

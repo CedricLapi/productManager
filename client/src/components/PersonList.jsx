@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 const PersonList = (props) => {
   /*we deconstruct getter and setter which were passed down via props by the parent component (app.js) to our
@@ -22,11 +23,17 @@ useEffect(() => {
     <div>
       {
         people.map((person, index)=>{
-          return <p key={index}>{person.lastName}, {person.firstName}</p>
-        })
+          return ( <div key={index}>
+
+            <p>{person.lastName}</p>
+             <p>{person.firstName}</p>
+
+             <Link to={`/people/${person._id}`}> {person.firstName}'s Page!</Link>
+             </div>
+        )})
       }
     </div>
-  )
+  );
 }
 
 export default PersonList;
