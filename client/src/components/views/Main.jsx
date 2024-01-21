@@ -4,6 +4,8 @@ import PersonList from '../PersonList'
 
 const Main = (props) => {
     const [people, setPeople] = useState([]);
+
+    
   return (
     /*PersonForm and PersonList can both utilize the getter and the setter established in their Component:*/
     <div>
@@ -11,7 +13,7 @@ const Main = (props) => {
 
         <hr/>
         
-        <PersonList people={people} setPeople={setPeople}/>
+        <PersonList people={people} setPeople={setPeople} /> 
     </div>
   )
 }
