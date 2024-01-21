@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import axios from 'axios';
+import { Card, CardContent, Paper } from '@mui/material';
 
 const PersonForm = (props) => {
 
@@ -28,8 +29,22 @@ const PersonForm = (props) => {
             .catch(err => console.log(err))
 }
   return (
+
+    
     <form onSubmit={onSubmitHandler}>
+        <Paper elevation={3}>
+            <p>FILL THE FORM BELOW:</p>
+        </Paper>
+
+        <Card>
+            <CardContent>
+                <h3>Subscription will be closed quite soon, hurry up!</h3>
+            </CardContent>
+        </Card>
+
+
         <p>
+            
             <label> First Name</label><br/>
             {/* When the user types in this input, our onChange synthetic event runs
             this arrow function, setting that event's target's (input) value (what's typed into the input)
