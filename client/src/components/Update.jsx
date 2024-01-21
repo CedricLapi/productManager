@@ -13,7 +13,7 @@ const Update = (props) => {
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/people/' + id)
-        .them(res => {
+        .then(res => {
             setFirstName(res.data.firstName);
             setLastName(res.data.lastName);
         })
@@ -27,7 +27,7 @@ const Update = (props) => {
         })
             .then(res => {
                 console.log(res);
-                navigate("/people/"); //This will take us back to the Main.js
+                navigate("/people"); //This will take us back to the Main.js
             })
             .catch(err => console.log(err))
     }
